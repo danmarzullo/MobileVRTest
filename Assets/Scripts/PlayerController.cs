@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cc = GetComponent<CharacterController>();	
+//		VRSettings.loadedDeviceName;
 	}
 	
 	// Update is called once per frame
 	public void Update () {
 		if (Input.GetMouseButton (0)) {
+//		if (GvrController.AppButton) {
+
 			Vector3 forward = camera.TransformDirection(Vector3.forward);
 			cc.SimpleMove (forward * speed);
 		}
