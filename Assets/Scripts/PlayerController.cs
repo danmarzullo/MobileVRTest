@@ -19,9 +19,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Update () {
-		if (Input.GetMouseButton (0)) {
-//		if (GvrController.AppButton) {
-
+//		if (Input.GetMouseButton (0)) {
+		if (GvrController.AppButton) {
+//		if (GvrController.IsTouching) {
+//		if (true){
 			Vector3 forward = camera.TransformDirection(Vector3.forward);
 			cc.SimpleMove (forward * speed);
 		}
